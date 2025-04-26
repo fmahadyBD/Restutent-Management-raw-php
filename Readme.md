@@ -35,7 +35,7 @@
 
 
 ## Last work on this version:
-![alt text](../web-app/screenshorts/navbar.png)
+![alt text](navbar.png)
 
 ---
 
