@@ -35,7 +35,7 @@
 
 
 ## Last work on this version:
-![alt text](navbar.png)
+![alt text](/screenshorts/navbar.png)
 
 ---
 
