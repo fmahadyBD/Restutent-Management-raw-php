@@ -33,5 +33,9 @@
 - **Server Environment:** XAMPP  
 - **Version Control:** Git & GitHub  
 
+
+## Last work on this version:
+![alt text](../web-app/screenshorts/navbar.png)
+
 ---
 
