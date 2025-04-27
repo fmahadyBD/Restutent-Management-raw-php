@@ -35,7 +35,7 @@
 
 
 ## Last work on this version:
-![alt text](/screenshorts/d02.png)
+![alt text](/screenshorts/dashboard.png)
 
 ---
 
