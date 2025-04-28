@@ -35,7 +35,18 @@
 
 
 ## Last work on this version:
-![alt text](/screenshorts/dashboard.png)
+
+## This basic Dashboard Look:
+![Dashboard](/screenshorts/dashboard.png)
+
+## This is Login page view:
+
+![Login](/screenshorts/login.png)
+
+## This is Register page view:
+
+![Register](/screenshorts/register.png)
+
 
 ---
 
