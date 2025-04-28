@@ -36,8 +36,7 @@
 
 ## Last work on this version:
 
-## This basic Dashboard Look:
-![Dashboard](/screenshorts/dashboard.png)
+
 
 ## This is Login page view:
 
@@ -46,6 +45,25 @@
 ## This is Register page view:
 
 ![Register](/screenshorts/register.png)
+
+## This is Employee List Look:
+![Employee](/screenshorts/employee.png)
+
+
+## This is foods list Look:
+![food](/screenshorts/foods.png)
+
+
+## This is offer's Look:
+![offer](/screenshorts/offer.png)
+
+
+## This is oders Look:
+![order](/screenshorts/order.png)
+
+
+## This is all user's Look:
+![users](/screenshorts/user.png)
 
 
 ---
