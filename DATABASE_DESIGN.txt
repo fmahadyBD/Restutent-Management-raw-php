@@ -1,0 +1,42 @@
+CREATE DATABASE kr;
+
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fname VARCHAR(100),
+    lname VARCHAR(100),
+    email VARCHAR(150) UNIQUE,
+    password VARCHAR(255),
+    mobile VARCHAR(20),
+    address TEXT
+);
+
+CREATE TABLE food (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150),
+    image VARCHAR(255),
+    category VARCHAR(100),
+    price DECIMAL(10,2),
+    status VARCHAR(50)
+);
+
+CREATE TABLE offer (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150),
+    category VARCHAR(100),
+    discount DECIMAL(5,2),
+    start DATE,
+    end DATE,
+    status VARCHAR(50)
+);
+
+
+CREATE TABLE employee (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150),
+    email VARCHAR(150) UNIQUE,
+    mobile VARCHAR(20),
+    address TEXT,
+    position VARCHAR(100),
+    salary DECIMAL(10,2),
+    status VARCHAR(50)
+);
