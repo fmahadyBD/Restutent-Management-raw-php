@@ -183,7 +183,11 @@ include __DIR__ . '/../../../config/database.php';
                                                 <button class="btn btn-sm btn-outline-success">
                                                     <i class="fas fa-edit"></i>
                                                 </button>
-                                                <button class="btn btn-sm btn-outline-danger">
+                                                <!-- Delete Button -->
+                                                <button class="btn btn-sm btn-outline-danger" 
+                                                    data-bs-toggle="modal" 
+                                                    data-bs-target="#deleteModal" 
+                                                    data-id="<?= $row['id'] ?>">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </div>
@@ -199,7 +203,38 @@ include __DIR__ . '/../../../config/database.php';
         </main>
     </div>
 
+        <!-- Delete Confirmation Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Are you sure you want to delete this item?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+    var deleteModal = document.getElementById('deleteModal');
+    deleteModal.addEventListener('show.bs.modal', function (event) {
+      var button = event.relatedTarget; // Button that triggered modal
+      var id = button.getAttribute('data-id'); // Get id from data-id
+
+      var confirmBtn = document.getElementById('confirmDeleteBtn');
+      confirmBtn.href = 'delete_food.php?id=' + id; // Set delete link
+    });
+    </script>
 </body>
 
 </html>
