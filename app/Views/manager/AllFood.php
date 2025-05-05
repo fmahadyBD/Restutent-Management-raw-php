@@ -1,4 +1,10 @@
-<?php include '../../config.database.php'; ?>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Correct include path (using absolute path)
+include __DIR__ . '/../../../config/database.php';
+?>
 
 <h2>Food Items</h2>
 <a href="add_food.php">Add New Food</a>

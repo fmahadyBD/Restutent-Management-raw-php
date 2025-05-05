@@ -68,3 +68,8 @@
 
 ---
 
+http://localhost/web-app/Restutent-Management-raw-php/app/Views/manager/AllFood.php
+
+Need to give the permmission of the htdoc folder
+and when i saved the data it also need the permission:
+sudo chmod -R 777 /opt/lampp/htdocs/web-app/Restutent-Management-raw-php/storage
