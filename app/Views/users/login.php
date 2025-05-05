@@ -36,11 +36,6 @@
                         </div>
                     </div>
 
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember">
-                        <label class="form-check-label" for="remember">Remember me</label>
-                    </div>
-
                     <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-primary py-2">
                             <i class="fas fa-sign-in-alt me-2"></i> Login

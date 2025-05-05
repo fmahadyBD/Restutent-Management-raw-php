@@ -1,3 +1,6 @@
+<?php
+include __DIR__ . '/../../../config/database.php'; // Make sure this is included at the top
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,7 @@
     <link rel="stylesheet" href="../../../public/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../../public/fontawesome/css/all.css" />
     <link rel="stylesheet" href="../../../public/fontawesome/css/fontawesome.min.css" />
-    <title>All User</title>
+    <title>All Users</title>
 </head>
 
 <body>
@@ -23,8 +26,6 @@
                 <i class="fas fa-chart-line me-2 text-success"></i>
                 RS Restaurant APP &nbsp; &nbsp;
             </a>
-            
-            
 
             <div class="collapse navbar-collapse" id="navbarToggler">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -73,7 +74,7 @@
                                 </a>
                             </li>
                             <li>
-                                <hr class="dropdown-divoder" />
+                                <hr class="dropdown-divider" />
                             </li>
 
                             <li>
@@ -131,7 +132,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header bg-white py-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5 class="mb-0 fw-bold">Customar Records</h5>
+                            <h5 class="mb-0 fw-bold">Customer Records</h5>
                             <button class="btn btn-primary btn-sm">
                                 <i class="fas fa-plus me-1"></i> Add New
                             </button>
@@ -144,7 +145,8 @@
                                 <thead class="table-light">
                                     <tr>
                                         <th class="ps-4">ID</th>
-                                        <th>Name</th>
+                                        <th>Fname</th>
+                                        <th>Lname</th>
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Address</th>
@@ -152,50 +154,36 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>469</td>
-                                        <td>Mahady Hasan Fahim</td>
-                                        <td>fmahadybd@gmail.com</td>
-                                        <td>01722003285</td>
-                                        <td>Dhaka</td>
-                                        <td class="text-end pe-4">
-                                            <div class="btn-group">
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-outline-success">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-outline-danger">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
-
-
-
-
-                                    <tr>
-                                        <td>469</td>
-                                        <td>Mahady Hasan Fahim</td>
-                                        <td>fmahadybd@gmail.com</td>
-                                        <td>01722003285</td>
-                                        <td>Mymensigh</td>
-                                        <td class="text-end pe-4">
-                                            <div class="btn-group">
-                                                <button class="btn btn-sm btn-outline-primary">
-                                                    <i class="fas fa-eye"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-outline-success">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-outline-danger">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </div>
-                                        </td>
-                                    </tr>
+                
+                                    <?php
+                                    $result = $conn->query("SELECT * FROM users");
+                                    while ($row = $result->fetch_assoc()):
+                                    ?>
+                                        <tr>
+                                            <td><?= $row['id'] ?></td>
+                                            <td><?= $row['fname'] ?></td>
+                                            <td><?= $row['lname'] ?></td>
+                                            <td><?= $row['email'] ?></td>
+                                            <td><?= $row['mobile'] ?></td>
+                                            <td><?= $row['address'] ?></td>
+                                            <td class="text-end pe-4">
+                                                <div class="btn-group">
+                                                    <button class="btn btn-sm btn-outline-primary">
+                                                        <i class="fas fa-eye"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-success">
+                                                        <i class="fas fa-edit"></i>
+                                                    </button>
+                                                    <button class="btn btn-sm btn-outline-danger" 
+                                                        data-bs-toggle="modal" 
+                                                        data-bs-target="#deleteModal" 
+                                                        data-id="<?= $row['id'] ?>">
+                                                        <i class="fas fa-trash"></i>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    <?php endwhile; ?>
                                 </tbody>
                             </table>
                         </div>
@@ -203,11 +191,38 @@
                 </div>
             </div>
         </main>
-        
+    </div>
 
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    Are you sure you want to delete this user?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <a href="" id="confirmDeleteBtn" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
+
 <script src="../../../public/js/bootstrap.bundle.min.js"></script>
 
+<script>
+    var deleteModal = document.getElementById('deleteModal');
+    deleteModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var id = button.getAttribute('data-id');
+        var confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+        confirmDeleteBtn.href = 'delete_user.php?id=' + id;
+    });
+</script>
 </html>
