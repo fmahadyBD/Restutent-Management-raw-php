@@ -44,7 +44,7 @@
 
                     <div class="text-center">
                         <a href="#" class="text-decoration-none d-block mb-2">Forgot password?</a>
-                        <span class="text-muted">Don't have an account? <a href="./Register.html" class="text-decoration-none text-primary">Register</a></span>
+                        <span class="text-muted">Don't have an account? <a href="./new_user.php" class="text-decoration-none text-primary">Register</a></span>
                     </div>
                 </form>
             </div>

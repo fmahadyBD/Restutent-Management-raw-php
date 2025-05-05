@@ -133,7 +133,7 @@ $message = '
                 </li>
 
                 <li>
-                  <a href="../layouts/login.html" class="dropdown-item">
+                  <a href="../users/login.php" class="dropdown-item">
                     <i class="fas fa-sign-out-alt me-2"></i>
                     Logout
                   </a>
@@ -146,42 +146,42 @@ $message = '
     </nav>
 
     <div class="d-flex">
-      <aside class="bg-dark text-light p-3"style="width: 250px; min-height: 100vh">
-        <h4 class="mb-4"><i class="fas fa-tools me-2"></i>Admin Panel</h4>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">
-            <a href="./dashboard.html" class="nav-link text-light">
-              <i class="fas fa-tachometer-alt me-2"></i>Dashboard
-            </a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="./employee.html" class="nav-link text-light">
-              <i class="fas fa-user-tie me-2"></i>Employees
-            </a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="./food.php" class="nav-link text-light">
-              <i class="fas fa-hamburger me-2"></i>Food Items
-            </a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="./order.html" class="nav-link text-light">
-              <i class="fas fa-receipt me-2"></i>Orders
-            </a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="./users.html" class="nav-link text-light">
-              <i class="fas fa-users me-2"></i>Users
-            </a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="./offer.html" class="nav-link text-light">
-              <i class="fas fa-handshake me-2"></i>Offers
-            </a>
-          </li>
-        </ul>
-      </aside>
-
+    <aside class="bg-dark text-light p-3" style="width: 250px; min-height: 100vh;">
+            <h4 class="mb-4"><i class="fas fa-tools me-2"></i>Admin Panel</h4>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a href="./dashboard.php" class="nav-link text-light">
+                        <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="./employees.php" class="nav-link text-light">
+                        <i class="fas fa-user-tie me-2"></i>Employees
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="./foods.php" class="nav-link text-light">
+                        <i class="fas fa-hamburger me-2"></i>Food Items
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="./orders.php" class="nav-link text-light">
+                        <i class="fas fa-receipt me-2"></i>Orders
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="./users.php" class="nav-link text-light">
+                        <i class="fas fa-users me-2"></i>Users
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="./offer.php" class="nav-link text-light">
+                        <i class="fas fa-handshake me-2"></i>Offers
+                    </a>
+                </li>
+                
+            </ul>
+        </aside>
       <main class="flex-grow-1 p-4">
         <div class="container py-5">
           <div class="card p-4 shadow">

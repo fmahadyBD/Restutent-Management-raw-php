@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                     </div>
 
                     <div class="text-center text-muted">
-                        Already have an account? <a href="#" class="text-decoration-none">Login</a>
+                        Already have an account? <a href="login.php" class="text-decoration-none">Login</a>
                     </div>
                 </form>
             </div>
