@@ -1,7 +1,11 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../../auth/login.php");
+    exit;
+}
 include __DIR__ . '/../../../config/database.php'; // Your DB connection
 
 if ($conn->connect_error) {

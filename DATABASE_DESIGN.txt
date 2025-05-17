@@ -17,7 +17,7 @@ CREATE TABLE food (
     category VARCHAR(100),
     price DECIMAL(10,2),
     status VARCHAR(50)
-);
+);F
 
 CREATE TABLE offer (
     id INT AUTO_INCREMENT PRIMARY KEY,

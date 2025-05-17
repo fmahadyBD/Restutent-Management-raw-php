@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($row['role'] === 'admin') {
                     header("Location: ../manager/dashboard.php");
                 } else {
-                    header("Location: ../users/home.php");
+                    header("Location: ../front/index.php");
                 }
                 exit;
             } else {

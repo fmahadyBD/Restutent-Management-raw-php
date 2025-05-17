@@ -1,5 +1,11 @@
 <?php
 include __DIR__ . '/../../../config/database.php'; // Make sure this is included at the top
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../../auth/login.php");
+    exit;
+}
+
 ?>
 <?php include 'header.php'; ?>
         <main class="flex-grow-1 p-4">
