@@ -31,7 +31,7 @@ include __DIR__ . '/../../../config/database.php'; // Make sure this is included
                                 <tbody>
                 
                                     <?php
-                                    $result = $conn->query("SELECT * FROM users");
+                                    $result = $conn->query("SELECT * FROM users WHERE LOWER(role) = 'user'");
                                     while ($row = $result->fetch_assoc()):
                                     ?>
                                         <tr>
