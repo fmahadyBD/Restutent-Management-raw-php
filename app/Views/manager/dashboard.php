@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../../auth/login.php");
+    exit;
+}
+?>
+
 <?php include 'header.php'; ?>
 
         <main class="flex-grow-1 p-4">

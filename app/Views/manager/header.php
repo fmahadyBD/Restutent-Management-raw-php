@@ -77,7 +77,7 @@
                             </li>
 
                             <li>
-                                <a href="../users/login.php" class="dropdown-item">
+                                <a href="../users/logout.php" class="dropdown-item">
                                     <i class="fas fa-sign-out-alt me-2"></i>
                                     Logout
                                 </a>
