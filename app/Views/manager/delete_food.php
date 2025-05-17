@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $stmt->bind_param("i", $id);
 
     if ($stmt->execute()) {
-        header("Location: food.php?msg=Item+Deleted");
+        header("Location: foods.php?msg=Item+Deleted");
         exit();
     } else {
         echo "Error deleting record: " . $conn->error;
